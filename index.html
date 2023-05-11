@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gato</title>
+<style>
+    body {
+        background-color: #1f1f2e;
+        font-family: Arial, sans-serif;
+    }
+
+    h2 {
+        color: #ffffff;
+        font-size: 36px;
+        text-align: center;
+        text-shadow: 2px 2px #e60073;
+    }
+
+    table {
+        border-collapse: collapse;
+        margin: 0 auto;
+        box-shadow: 0px 0px 20px #e60073;
+    }
+
+    td {
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        font-size: 48px;
+        font-weight: bold;
+        color: #ffffff;
+        text-shadow: 2px 2px #e60073;
+        background-color: #1f1f2e;
+    }
+
+    input {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        font-size: 36px;
+        font-weight: bold;
+        color: #ffffff;
+        text-shadow: 2px 2px #e60073;
+        background-color: transparent;
+        border: none;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    button {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff;
+        text-shadow: 2px 2px #e60073;
+        background-color: #e60073;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #ff80bf;
+    }
+
+    /* --- DIVIDERS --- */
+
+    #table-container {
+        margin: 0 auto;
+        padding: 20px;
+        border: 3px solid #e60073;
+        border-radius: 10px;
+        display: inline-block;
+    }
+
+    #button-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+
+    /* */
+    /* tr:nth-child(2) td {
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+}
+
+tr td:nth-child(2) {
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+}
+
+tr:nth-child(1) td:nth-child(1),
+tr:nth-child(3) td:nth-child(1),
+tr:nth-child(2) td:nth-child(2),
+tr:nth-child(2) td:nth-child(1),
+tr:nth-child(2) td:nth-child(3) {
+  background-color: white;
+  border-radius: 50%;
+} */
+
+/* dos */
+td:nth-child(odd)::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #ffffff;
+    transform: rotate(0deg);
+    position: relative;
+    top: -1px;
+    margin-left: auto; /* Agregamos esta línea para alinear la línea al lado derecho */
+    margin-right: 10px; /* Agregamos esta línea para dejar un espacio entre la línea y el gato */
+}
+
+/* Agregamos esta nueva línea para dibujar la línea adicional */
+td:nth-child(3n)::before {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 10px;
+    background-color: #ffffff;
+    transform: rotate(0deg);
+    position: relative;
+    left: -0px;
+    bottom: -0px;
+    
+    margin-top: auto; /* Agregamos esta línea para alinear la línea al centro */
+    margin-bottom: auto; /* Agregamos esta línea para alinear la línea al centro */
+}
+
+td:nth-child(even)::before {
+    content: '';
+    display: block;
+    width: 55px;
+    height: 2px;
+    background-color: #ffffff;
+    transform: rotate(-90deg);
+    position: relative;
+    bottom: -20px;
+    margin-right: auto; /* Agregamos esta línea para alinear la línea al lado derecho */
+    margin-left: -25px; /* Agregamos esta línea para dejar un espacio entre la línea y el gato */
+}
+
+
+
+/* gatoooooooooooooooo */
+
+  /* definimos la imagen del gato */
+  #gato {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-image: url("gato2.jpg");
+        background-size: cover;
+        z-index: 9999; /* aseguramos que el gato se muestre por encima de otros elementos */
+    }
+
+    /* definimos las transformaciones y animaciones */
+    @keyframes mover-gato {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(100%);
+        }
+    }
+
+    @keyframes girar-gato {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    /* aplicamos las transformaciones y animaciones al gato */
+    #gato {
+        animation-name: mover-gato;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+    #gato:hover {
+        animation-name: girar-gato;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+    }
+
+
+</style>
+
+
+</head>
+
+<body>
+    
+    <h2>Gato</h2>
+
+    <table>
+        <th>
+            <tr>
+                <td>
+                    <input type="text" id="valor1" name="valor1" maxlength="1" size="2" onfocus="obtenerSeleccionado(1)">
+                </td>
+                <td>
+                    <input type="text" id="valor2" name="valor2" maxlength="1" size="2" onfocus="obtenerSeleccionado(2)">
+                </td>
+                <td>
+                    <input type="text" id="valor3" name="valor3" maxlength="1" size="2" onfocus="obtenerSeleccionado(3)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="valor4" name="valor4" maxlength="1" size="2" onfocus="obtenerSeleccionado(4)">
+                </td>
+                <td>
+                    <input type="text" id="valor5" name="valor5" maxlength="1" size="2" onfocus="obtenerSeleccionado(5)">
+                </td>
+                <td>
+                    <input type="text" id="valor6" name="valor6" maxlength="1" size="2" onfocus="obtenerSeleccionado(6)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="valor7" name="valor7" maxlength="1" size="2" onfocus="obtenerSeleccionado(7)">
+                </td>
+                <td>
+                    <input type="text" id="valor8" name="valor8" maxlength="1" size="2" onfocus="obtenerSeleccionado(8)">
+                </td>
+                <td>
+                    <input type="text" id="valor9" name="valor9" maxlength="1" size="2" onfocus="obtenerSeleccionado(9)">
+                </td>
+            </tr>
+        </th>
+        
+    </table>
+
+    <input type="hidden" id="cont" name="cont" value="0">
+    <input type="hidden" id="seleccionado" name="seleccionado" value="0">
+    <div id="gato"></div>
+    <button onclick="obtenerValor(1)">
+        Jugador X
+    </button>
+
+    <button onclick="obtenerValor(2)">
+        Jugador O
+    </button>
+    <button onclick="reiniciar()">
+        Reiniciar
+    </button>
+    
+    <hr>
+    <div id="mensaje" style="text-align: center; font-size: 2em; margin-top: 20px;"></div>
+    
+</body>
+<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="gato.js"></script>
+
+</html>

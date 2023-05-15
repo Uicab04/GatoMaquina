@@ -181,10 +181,8 @@ const revisarFila = (jugador) => {
     let valor7 = document.getElementById('valor7').value;
     let valor8 = document.getElementById('valor8').value;
     let valor9 = document.getElementById('valor9').value;
-    
-    let celdaSeleccionada = document.getElementById('seleccionado').value;
 
-    
+    let celdaSeleccionada = document.getElementById('seleccionado').value;
 
     if (jugador == 1) {
 
@@ -192,8 +190,7 @@ const revisarFila = (jugador) => {
     
             if (valor1 == valor4 && valor1 == valor7) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(1,4,7);
-   
+                dibujarLineaGanador(1,4,7)
 
             }
             if (valor1 == valor5 && valor1 == valor9) {
@@ -306,7 +303,7 @@ const revisarFila = (jugador) => {
                 mensajeGanador(jugador);
                 dibujarLineaGanador(8,9,7)
             }
-            if (valor8 == valor5 && valor8 == valor2) {
+            if (valor8 == valor5 && valor8 == valor3) {
                 mensajeGanador(jugador);
                 dibujarLineaGanador(8,5,3)
             }
@@ -340,15 +337,15 @@ const revisarFila = (jugador) => {
     
             if (valor1 == valor4 && valor1 == valor7) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(1,4,7);
+                dibujarLineaGanador(1,4,7)
             }
             if (valor1 == valor5 && valor1 == valor9) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(1,5,9);
+                dibujarLineaGanador(1,5,9)
             }
             if (valor1 == valor2 && valor1 == valor3) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(1,2,3);
+                dibujarLineaGanador(1,2,3)
             }
         }
     
@@ -356,11 +353,11 @@ const revisarFila = (jugador) => {
         if (celdaSeleccionada == 2) {
             if (valor2 == valor5 && valor2 == valor8) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(2,5,8);
+                dibujarLineaGanador(2,5,8)
             }
             if (valor2 == valor1 && valor2 == valor3) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(1,2,3);
+                dibujarLineaGanador(1,2,3)
             }
         }
     
@@ -368,15 +365,15 @@ const revisarFila = (jugador) => {
         if (celdaSeleccionada == 3) {
             if (valor3 == valor5 && valor3 == valor7) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(3,5,7);
+                dibujarLineaGanador(3,5,7)
             }
             if (valor3 == valor6 && valor3 == valor9) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(3,6,9);
+                dibujarLineaGanador(3,6,9)
             }
             if (valor3 == valor1 && valor3 == valor2) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(3,1,2);
+                dibujarLineaGanador(3,1,2)
             }
         }
         //  horizontal
@@ -395,23 +392,23 @@ const revisarFila = (jugador) => {
         if (celdaSeleccionada == 5) {
             if (valor2 == valor5 && valor5 == valor8) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(2,5,8);
+                dibujarLineaGanador(2,5,8)
             }
             if (valor1 == valor5 && valor5 == valor9) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(1,5,9);
+                dibujarLineaGanador(1,5,9)
             }
             // DIAGONAL
             if (valor5 == valor7 && valor5 == valor3) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(5,3,7);
+                dibujarLineaGanador(5,3,7)
             }
 
             // HORIZONTAL 2
                      
             if (valor5 == valor4 && valor5 == valor6) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(5,4,6);
+                dibujarLineaGanador(5,4,6)
             }
 
         }
@@ -420,11 +417,11 @@ const revisarFila = (jugador) => {
         if (celdaSeleccionada == 6) {
             if (valor6 == valor5 && valor6 == valor4) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(6,5,4);
+                dibujarLineaGanador(6,5,4)
             }
             if (valor6 == valor3 && valor6 == valor9) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(6,3,9);
+                dibujarLineaGanador(6,3,9)
             }
         }
 
@@ -432,15 +429,15 @@ const revisarFila = (jugador) => {
         if (celdaSeleccionada == 7) {
             if (valor7 == valor5 && valor7 == valor3) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(3,5,7);
+                dibujarLineaGanador(3,5,7)
             }
             if (valor7 == valor8 && valor7 == valor9) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(8,9,7);
+                dibujarLineaGanador(8,9,7)
             }
             if (valor7 == valor4 && valor7 == valor1) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(7,4,1);
+                dibujarLineaGanador(7,4,1)
             }
         }
 
@@ -451,15 +448,15 @@ const revisarFila = (jugador) => {
         if (celdaSeleccionada == 8) {
             if (valor8 == valor2 && valor8 == valor5) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(8,2,5);
+                dibujarLineaGanador(8,2,5)
             }
             if (valor8 == valor7 && valor8 == valor9) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(8,9,7);
+                dibujarLineaGanador(8,9,7)
             }
-            if (valor8 == valor5 && valor8 == valor2) {
+            if (valor8 == valor5 && valor8 == valor3) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(8,5,3);
+                dibujarLineaGanador(8,5,3)
             }
         }
     
@@ -467,17 +464,17 @@ const revisarFila = (jugador) => {
         if (celdaSeleccionada == 9) {
             if (valor1 == valor5 && valor1 == valor9) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(1,5,9);
+                dibujarLineaGanador(1,5,9)
             }
        
             
             if (valor9 == valor3 && valor9 == valor6) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(9,3,6);
+                dibujarLineaGanador(9,3,6)
             }
             if (valor9 == valor8 && valor9 == valor7) {
                 mensajeGanador(jugador);
-                dibujarLineaGanador(9,8,7);
+                dibujarLineaGanador(9,8,7)
             }
 
         }
@@ -492,88 +489,7 @@ const revisarFila = (jugador) => {
 
 
     }
-    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const obtenerValor = (jugador) => {
-//     let celdaSeleccionada = document.getElementById('seleccionado').value;
-//     let valorCeldaSeleccionada = document.getElementById('valor' + celdaSeleccionada).value;
-    
-//     // Verificar si la celda ya ha sido seleccionada
-//     if (valorCeldaSeleccionada !== '') {
-//       return;
-//     }
-  
-//     // Colocar la marca del jugador actual en la celda seleccionada
-//     if (jugador == 1) {
-//       document.getElementById('valor' + celdaSeleccionada).value = 'X';
-//     } else {
-//       document.getElementById('valor' + celdaSeleccionada).value = 'O';
-//     }
-    
-//     // Deshabilitar la celda seleccionada
-//     document.getElementById('valor' + celdaSeleccionada).disabled = true;
-  
-//     // Verificar si hay un ganador
-//     revisarFila(jugador);
-  
-//     // Obtener la lista de celdas disponibles
-//     let celdasDisponibles = [];
-//     for (let i = 1; i <= 9; i++) {
-//       let valorCelda = document.getElementById('valor' + i).value;
-//       if (valorCelda === '') {
-//         celdasDisponibles.push(i);
-//       }
-//     }
-  
-//     // Si no hay celdas disponibles, terminar el juego
-//     if (celdasDisponibles.length === 0) {
-//       document.getElementById('mensaje').innerHTML = '<h1 style="color: orange;">¡Juego terminado!</h1><p style="font-size: 1.5em;">Empate.</p>';
-//       return;
-//     }
-  
-//     // Si el jugador actual es la máquina, seleccionar una celda al azar
-//     if (jugador == 2) {
-//       let celdaMaquina = celdasDisponibles[Math.floor(Math.random() * celdasDisponibles.length)];
-//       document.getElementById('valor' + celdaMaquina).value = 'O';
-//       document.getElementById('valor' + celdaMaquina).disabled = true;
-//       revisarFila(jugador);
-//     }
-  
-//     // Incrementar el contador de movimientos
-//     let cont = document.getElementById('cont').value;
-//     document.getElementById('cont').value = ++cont;
-//   }
-  
 
 // crea una validacion de un correo
 
